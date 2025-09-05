@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="assest/css/styles.css">
+    <title>King Burger</title>
+    <script src="assest/js/main.js"> </script>
+</head>
+    <!-- Simulador de Restaurante (Pedidos y Menú)
+    👉 Azucena
+    Crear un menú visual con Bootstrap.
+    Inputs para seleccionar platillos y cantidad.
+    Botón para agregar al pedido y actualizar la lista (array de objetos en JS).
+    Mostrar total de la cuenta y opción de propina.
+    💡 Tip: cada platillo es un objeto, la orden es un array, actualiza el DOM al agregar o eliminar items.
+    -->
+<body class="p-4">
+  <div class="container">
+    <h1 class="text-center mb-4">🍽 Simulador Restaurante</h1>
+
+    <!-- Menú -->
+    <div class="row" id="menu">
+      <!-- Pizza -->
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Pizza</h5>
+            <p class="card-text">Precio: $10</p>
+            <input type="number" min="1" value="1" class="form-control cantidad mb-2">
+            <button class="btn btn-primary w-100 add-btn" data-nombre="Pizza" data-precio="10">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Hamburguesa -->
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Hamburguesa</h5>
+            <p class="card-text">Precio: $8</p>
+            <input type="number" min="1" value="1" class="form-control cantidad mb-2">
+            <button class="btn btn-primary w-100 add-btn" data-nombre="Hamburguesa" data-precio="8">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <!-- Ensalada -->
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">Ensalada</h5>
+            <p class="card-text">Precio: $6</p>
+            <input type="number" min="1" value="1" class="form-control cantidad mb-2">
+            <button class="btn btn-primary w-100 add-btn" data-nombre="Ensalada" data-precio="6">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pedido -->
+    <h3 class="mt-4">📝 Tu Pedido</h3>
+    <ul class="list-group" id="pedido"></ul>
+
+    <div class="row g-2 mt-3">
+      <div class="col-md-4">
+        <label class="form-label">Propina (%)</label>
+        <input type="number" id="propina" class="form-control" value="0" min="0">
+      </div>
+      <div class="col-md-4 d-flex align-items-end">
+        <button id="vaciar" class="btn btn-outline-secondary">Vaciar pedido</button>
+      </div>
+      <div class="col-md-4 d-flex align-items-end justify-content-end">
+        <h4>💰 Total: $<span id="total">0.00</span></h4>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
